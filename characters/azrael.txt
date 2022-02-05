@@ -1,15 +1,15 @@
-Azrael
-4
-3
-wis
-cha
-4
-1
-1
--1
-0
-3
-61
-20
-3
-1
+Name Azrael
+PrimaryMod 4
+SaveDCStatMod 3
+SaveProf1 wis
+SaveProf2 cha
+STR 4
+DEX 1
+CON 1
+INT -1
+WIS -0
+CHA 3
+HP 61
+AC 20
+ProfBonus 3
+MagicWeaponBonus 1

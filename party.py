@@ -17,6 +17,7 @@ class Party:
         self.tor = Character(TOR)
         self.avg_ac = self.calc_avg_ac()
         self.avg_hp = self.calc_avg_hp()
+        self.avg_att_bonus = self.calc_avg_att_bonus()
     
     def calc_avg_ac(self):
         return (math.floor((self.asher.armour_class + self.azrael.armour_class
@@ -26,8 +27,14 @@ class Party:
     def calc_avg_hp(self):
         return (math.floor((self.asher.hit_points + self.azrael.hit_points
                 + self.unai.hit_points + self.tor.hit_points)
-                / NUM_CHARACTERS)) 
+                / NUM_CHARACTERS))
         
+    def calc_avg_att_bonus(self):
+        return (math.floor((self.asher.att_bonus + self.azrael.att_bonus
+                + self.unai.att_bonus + self.tor.att_bonus)
+                / NUM_CHARACTERS))
+
     def desc(self):
         return ("Average AC: " + str(self.avg_ac) + "\n"
-                + "Average HP: " + str(self.avg_hp))
+                + "Average HP: " + str(self.avg_hp) + "\n"
+                + "Average Attack Bonus: " + str(self.avg_att_bonus))

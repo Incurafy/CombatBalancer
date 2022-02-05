@@ -1,16 +1,15 @@
-Unai
-3
-3
-wis
-cha
--1
-1
-2
-2
-3
--1
-54
-16
-3
-3
-0
+Name Unai
+PrimaryMod 3
+SaveDCStatMod 3
+SaveProf1 wis
+SaveProf2 cha
+STR -1
+DEX 1
+CON 2
+INT 2
+WIS 2
+CHA 3
+HP 54
+AC 16
+ProfBonus 3
+MagicWeaponBonus 0

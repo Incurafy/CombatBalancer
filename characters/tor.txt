@@ -1,16 +1,15 @@
-Tor
-3
-3
-wis
-cha
-2
-3
-1
-0
--1
-3
-45
-16
-3
-3
-1
+Name Tor
+PrimaryMod 3
+SaveDCStatMod 3
+SaveProf1 wis
+SaveProf2 cha
+STR 2
+DEX 3
+CON 1
+INT 0
+WIS -1
+CHA 3
+HP 45
+AC 16
+ProfBonus 3
+MagicWeaponBonus 1

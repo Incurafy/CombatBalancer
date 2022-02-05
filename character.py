@@ -16,9 +16,15 @@ ARMOUR_CLASS = 12
 PROF_BONUS = 13
 MW_BONUS = 14
 
-
 class Character:
-    def parse(self, str):
+    def parse_file(self, file):
+        stats = open(file).read().splitlines()        
+        for x in range(len(stats)):        
+            temp = stats[x].split()
+            stats[x] = temp[1]
+        return stats
+    
+    def parse_save_prof(self, str):
         match str:
             case "str":
                 return STRENGTH
@@ -35,13 +41,13 @@ class Character:
             case _:
                 return "kittyflesh"
     
-    def __init__(self, path) -> None:
-        self.stats = open(path).read().splitlines()
+    def __init__(self, file) -> None:
+        self.stats = self.parse_file(file)
         self.name = self.stats[NAME]
         self.primary_stat = int(self.stats[PRIMARY_STAT])
         self.save_dc_stat = int(self.stats[SAVE_DC_STAT])
-        self.save_prof_1 = int(self.stats[self.parse(self.stats[SAVE_PROF_1])])
-        self.save_prof_2 = int(self.stats[self.parse(self.stats[SAVE_PROF_2])])
+        self.save_prof_1 = int(self.stats[self.parse_save_prof(self.stats[SAVE_PROF_1])])
+        self.save_prof_2 = int(self.stats[self.parse_save_prof(self.stats[SAVE_PROF_2])])
         self.strength = int(self.stats[STRENGTH])
         self.dexterity = int(self.stats[DEXTERITY])
         self.constitution = int(self.stats[CONSTITUTION])

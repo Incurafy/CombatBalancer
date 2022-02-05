@@ -1,10 +1,8 @@
 # main.py
 
-from party import Party
+from balance import Balance
 
-def main():
-    party = Party()
-    
-    print(party.desc())
-    
-main()
+balance = Balance()
+
+chance = balance.calc_hit_chance(7, 18, 1, True, False)
+print(f"Chance to hit AC: {chance}%")
