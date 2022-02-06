@@ -10,4 +10,3 @@ class Balance:
             return int((((21 + att_bonus - target_ac)**2) / 400) * 100)
         else:
             return int(((21 + att_bonus - target_ac) / 20) * 100)
-    
